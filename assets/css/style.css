@@ -1,0 +1,30 @@
+/* Growth-ring signature motif, used as a quiet background texture */
+.rings-bg {
+  background-image:
+    radial-gradient(circle at center, transparent 0 58px, rgba(255,255,255,0.10) 59px 60px, transparent 61px),
+    radial-gradient(circle at center, transparent 0 92px, rgba(255,255,255,0.08) 93px 94px, transparent 95px),
+    radial-gradient(circle at center, transparent 0 126px, rgba(255,255,255,0.06) 127px 128px, transparent 129px);
+  background-repeat: no-repeat;
+  background-position: 82% 20%;
+}
+.ring-divider {
+  height: 2px;
+  background: repeating-linear-gradient(90deg, rgba(11,42,31,0.14) 0 6px, transparent 6px 14px);
+}
+html { scroll-behavior: smooth; }
+.tab-active { color: #0B2A1F; border-color: #1E9A5A; }
+.tab-inactive { color: #6b7a72; border-color: transparent; }
+::selection { background: #BBF0D2; color: #0B2A1F; }
+input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible {
+  outline: 2px solid #1E9A5A; outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+.product-image-btn:hover img {
+  opacity: 0.92;
+}
+.product-image-btn:focus-visible {
+  outline: 2px solid #1E9A5A;
+  outline-offset: -2px;
+}

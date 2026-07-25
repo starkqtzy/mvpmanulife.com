@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpeg" href="../assets/images/team/mvp_falcon_logo.jpg">
+<title>MVP Falcon Unit — Manulife Financial Advisor</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind (CDN, no build step) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: {
+            950: '#081C15',
+            900: '#0B2A1F',
+            800: '#0F3D2E',
+            700: '#155E3E',
+            600: '#1A7A4D',
+            500: '#1E9A5A',
+            400: '#4ADE80',
+            200: '#BBF0D2',
+            100: '#DFF7E8',
+            50:  '#F3FBF6'
+          }
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace']
+        },
+        boxShadow: {
+          ring: '0 1px 2px rgba(11,42,31,0.06), 0 8px 24px -8px rgba(11,42,31,0.15)'
+        }
+      }
+    }
+  };
+</script>
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white text-forest-900 font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-forest-100">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <div class="flex items-center justify-between h-18 py-3">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="assets/images/team/mvp_falcon_logo.jpg" alt="MVP Falcon Unit logo" class="h-11 w-11 rounded-full object-cover ring-2 ring-forest-100">
+        <div class="leading-tight">
+          <p class="font-display font-semibold text-lg tracking-tight text-forest-900">MVP Falcon Unit</p>
+          <p class="text-[11px] uppercase tracking-[0.16em] text-forest-500">Manulife</p>
+        </div>
+      </a>
+
+      <button id="menuBtn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false" class="md:hidden w-10 h-10 grid place-items-center rounded-md border border-forest-200 text-forest-800">
+        <span id="menuIcon">☰</span>
+      </button>
+
+      <nav id="navLinks" class="hidden md:flex items-center gap-8 font-medium text-sm text-forest-800">
+        <a href="#products" class="hover:text-forest-500 transition-colors">Products</a>
+        <a href="#hiring" class="hover:text-forest-500 transition-colors">Hiring</a>
+        <a href="#achievements" class="hover:text-forest-500 transition-colors">Achievements</a>
+        <a href="#activities" class="hover:text-forest-500 transition-colors">Activities</a>
+        <a href="#forms" class="hover:text-forest-500 transition-colors">Forms</a>
+        <a href="#contact" class="px-4 py-2 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <nav id="navLinksMobile" class="hidden md:hidden flex-col gap-1 pb-4 text-sm font-medium text-forest-800">
+      <a href="#products" onclick="closeMenu()" class="py-2">Products</a>
+      <a href="#hiring" onclick="closeMenu()" class="py-2">Hiring</a>
+      <a href="#achievements" onclick="closeMenu()" class="py-2">Achievements</a>
+      <a href="#activities" onclick="closeMenu()" class="py-2">Activities</a>
+      <a href="#forms" onclick="closeMenu()" class="py-2">Forms</a>
+      <a href="#contact" onclick="closeMenu()" class="py-2 font-semibold text-forest-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative overflow-hidden bg-forest-900 text-white">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="order-2 md:order-1">
+      <span class="inline-block text-xs font-mono tracking-wide uppercase bg-forest-700/60 text-forest-100 px-3 py-1 rounded-full border border-forest-500/40">
+        MVP Falcon Unit · Manulife Financial Head Advisor
+      </span>
+      <h2 class="font-display font-semibold text-4xl md:text-5xl leading-[1.1] mt-5">
+        Protect your future,<br> one policy at a time.
+      </h2>
+      <p class="mt-5 text-forest-100/90 text-lg max-w-md">
+        Professional financial planning, protection solutions, advisor career opportunities, team achievements, training, and activities — all in one place.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-4 text-sm font-mono text-forest-100">
+        <span class="flex items-center gap-2">📱 0975-302-7912</span>
+        <span class="flex items-center gap-2">📧 mvpsandyclavano@gmail.com</span>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#forms" class="px-6 py-3 rounded-full bg-forest-400 text-forest-950 font-semibold hover:bg-white transition-colors">Get Insured Now</a>
+        <a href="#hiring" class="px-6 py-3 rounded-full border border-forest-300/60 text-white hover:bg-white/10 transition-colors">Join MVP Falcon Unit</a>
+      </div>
+    </div>
+    <div class="order-1 md:order-2 flex justify-center">
+      <img src="assets/images/profile/Sandy.png" alt="Sandy V. Clavano — MVP Falcon Unit" class="block w-[80%] h-auto object-contain">
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-forest-500">What we offer</p>
+    <h2 class="font-display font-semibold text-3xl md:text-4xl mt-2 text-forest-900">Products Offered</h2>
+    <p class="text-forest-700/80 mt-3 max-w-2xl">View sample product guides below. Use the official Manulife buttons for updated product details and disclosures.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <article class="group flex flex-col rounded-2xl border border-forest-100 overflow-hidden hover:shadow-ring transition-shadow bg-white h-full">
+        <button type="button" onclick="openProductImage('assets/images/products/freedom_plan.jpg', 'Manulife Freedom Plan')" class="product-image-btn h-48 w-full bg-forest-50 flex items-center justify-center p-3 cursor-zoom-in" aria-label="View Manulife Freedom Plan poster">
+          <img src="assets/images/products/freedom_plan.jpg" alt="Manulife Freedom Plan" class="max-h-full max-w-full object-contain">
+        </button>
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="font-display font-semibold text-lg text-forest-900">Manulife Freedom Plan</h3>
+          <p class="text-sm text-forest-700/80 mt-1 flex-1">Insurance + savings for a secure future.</p>
+          <div class="mt-4 pt-4 border-t border-forest-50 flex flex-nowrap gap-2">
+            <a target="_blank" href="https://www.manulife.com.ph/products/savings-retirement/freedom.html" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors whitespace-nowrap">View Official Details</a>
+            <a href="#forms" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full border border-forest-200 text-forest-800 hover:bg-forest-50 transition-colors whitespace-nowrap">Request Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group flex flex-col rounded-2xl border border-forest-100 overflow-hidden hover:shadow-ring transition-shadow bg-white h-full">
+        <button type="button" onclick="openProductImage('assets/images/products/healthflex.jpg', 'Manulife HealthFlex')" class="product-image-btn h-48 w-full bg-forest-50 flex items-center justify-center p-3 cursor-zoom-in" aria-label="View Manulife HealthFlex poster">
+          <img src="assets/images/products/healthflex.jpg" alt="Manulife HealthFlex" class="max-h-full max-w-full object-contain">
+        </button>
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="font-display font-semibold text-lg text-forest-900">Manulife HealthFlex</h3>
+          <p class="text-sm text-forest-700/80 mt-1 flex-1">Critical illness protection with life insurance support.</p>
+          <div class="mt-4 pt-4 border-t border-forest-50 flex flex-nowrap gap-2">
+            <a target="_blank" href="https://www.manulife.com/ph/insurance/products/health/health-flex" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors whitespace-nowrap">View Official Details</a>
+            <a href="#forms" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full border border-forest-200 text-forest-800 hover:bg-forest-50 transition-colors whitespace-nowrap">Request Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group flex flex-col rounded-2xl border border-forest-100 overflow-hidden hover:shadow-ring transition-shadow bg-white h-full">
+        <button type="button" onclick="openProductImage('assets/images/products/medsecure.jpg', 'Manulife MedSecure')" class="product-image-btn h-48 w-full bg-forest-50 flex items-center justify-center p-3 cursor-zoom-in" aria-label="View Manulife MedSecure poster">
+          <img src="assets/images/products/medsecure.jpg" alt="Manulife MedSecure" class="max-h-full max-w-full object-contain">
+        </button>
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="font-display font-semibold text-lg text-forest-900">Manulife MedSecure</h3>
+          <p class="text-sm text-forest-700/80 mt-1 flex-1">Medical insurance support for hospital bills and protection.</p>
+          <div class="mt-4 pt-4 border-t border-forest-50 flex flex-nowrap gap-2">
+            <a target="_blank" href="https://www.manulife.com.ph/products.html" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors whitespace-nowrap">View Manulife Products</a>
+            <a href="#forms" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full border border-forest-200 text-forest-800 hover:bg-forest-50 transition-colors whitespace-nowrap">Request Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group flex flex-col rounded-2xl border border-forest-100 overflow-hidden hover:shadow-ring transition-shadow bg-white h-full">
+        <button type="button" onclick="openProductImage('assets/images/products/react5.jpg', 'Manulife React 5')" class="product-image-btn h-48 w-full bg-forest-50 flex items-center justify-center p-3 cursor-zoom-in" aria-label="View Manulife React 5 poster">
+          <img src="assets/images/products/react5.jpg" alt="Manulife React 5" class="max-h-full max-w-full object-contain">
+        </button>
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="font-display font-semibold text-lg text-forest-900">Manulife React 5</h3>
+          <p class="text-sm text-forest-700/80 mt-1 flex-1">Basic protection for major critical illnesses.</p>
+          <div class="mt-4 pt-4 border-t border-forest-50 flex flex-nowrap gap-2">
+            <a target="_blank" href="https://www.manulife.com.ph/products.html" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors whitespace-nowrap">View Manulife Products</a>
+            <a href="#forms" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full border border-forest-200 text-forest-800 hover:bg-forest-50 transition-colors whitespace-nowrap">Request Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group flex flex-col rounded-2xl border border-forest-100 overflow-hidden hover:shadow-ring transition-shadow bg-white h-full">
+        <button type="button" onclick="openProductImage('assets/images/products/season100.jpg', 'Manulife Season 100')" class="product-image-btn h-48 w-full bg-forest-50 flex items-center justify-center p-3 cursor-zoom-in" aria-label="View Manulife Season 100 poster">
+          <img src="assets/images/products/season100.jpg" alt="Manulife Season 100" class="max-h-full max-w-full object-contain">
+        </button>
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="font-display font-semibold text-lg text-forest-900">Manulife Season 100</h3>
+          <p class="text-sm text-forest-700/80 mt-1 flex-1">Lifetime protection, peace of mind, and legacy planning.</p>
+          <div class="mt-4 pt-4 border-t border-forest-50 flex flex-nowrap gap-2">
+            <a target="_blank" href="https://www.manulife.com.ph/products.html" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors whitespace-nowrap">View Manulife Products</a>
+            <a href="#forms" class="inline-flex items-center justify-center text-xs leading-tight px-3.5 py-2 rounded-full border border-forest-200 text-forest-800 hover:bg-forest-50 transition-colors whitespace-nowrap">Request Quote</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="text-xs text-forest-700/60 mt-8 max-w-3xl">Note: Product posters are for general information only. Final benefits, premiums, coverage, and approval depend on Manulife's official product terms, underwriting, and policy contract.</p>
+  </div>
+</section>
+
+<!-- ============ HIRING ============ -->
+<section id="hiring" class="py-20 md:py-28 bg-forest-50">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-forest-500">Careers</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl mt-2 text-forest-900">We're Hiring</h2>
+      <p class="text-forest-700/80 mt-3">Be part of MVP Falcon Unit. Open for Unit Head Associate, Junior Sales Associate, part-time and full-time Financial Advisor opportunities.</p>
+      <ul class="mt-6 space-y-3">
+        <li class="flex items-start gap-3"><span class="text-forest-500 mt-0.5">🌿</span><span class="text-forest-800 text-sm">Monthly allowance and uncapped commissions may apply based on qualification and program rules</span></li>
+        <li class="flex items-start gap-3"><span class="text-forest-500 mt-0.5">🌿</span><span class="text-forest-800 text-sm">Productivity bonus and travel incentives</span></li>
+        <li class="flex items-start gap-3"><span class="text-forest-500 mt-0.5">🌿</span><span class="text-forest-800 text-sm">Flexible schedule and training support</span></li>
+        <li class="flex items-start gap-3"><span class="text-forest-500 mt-0.5">🌿</span><span class="text-forest-800 text-sm">Career growth and leadership opportunity</span></li>
+      </ul>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#forms" class="px-6 py-3 rounded-full bg-forest-800 text-white hover:bg-forest-700 transition-colors">Apply Now</a>
+        <a href="https://www.manulife.com.ph/about-us/joinmanulife.html" target="_blank" class="px-6 py-3 rounded-full border border-forest-300 text-forest-800 hover:bg-white transition-colors">View Manulife Careers</a>
+      </div>
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-ring border border-forest-100">
+      <img src="assets/images/hiring/mvp_falcon_hiring.jpg" alt="MVP Falcon Unit hiring" class="w-full object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-forest-500">Recognition</p>
+    <h2 class="font-display font-semibold text-3xl md:text-4xl mt-2 text-forest-900">Achievements and Recognition</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <figure class="relative rounded-2xl overflow-hidden group">
+        <img src="assets/images/achievements/achievement_01_summit_achiever.jpg" alt="Summit Achiever Circle Awardee" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/achievements/achievement_01_summit_achiever.jpg', 'Summit Achiever Circle Awardee')">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 to-transparent text-white text-sm p-4">Summit Achiever Circle Awardee</figcaption>
+      </figure>
+      <figure class="relative rounded-2xl overflow-hidden group">
+        <img src="assets/images/achievements/achievement_02_top2.jpg" alt="Top 2 Financial Advisor" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/achievements/achievement_02_top2.jpg', 'Top 2 Financial Advisor')">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 to-transparent text-white text-sm p-4">Top 2 Financial Advisor</figcaption>
+      </figure>
+      <figure class="relative rounded-2xl overflow-hidden group">
+        <img src="assets/images/achievements/achievement_03_freedom_plan.jpg" alt="Top Advisor of the Day – Freedom Plan" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/achievements/achievement_03_freedom_plan.jpg', 'Top Advisor of the Day – Freedom Plan')">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 to-transparent text-white text-sm p-4">Top Advisor of the Day – Freedom Plan</figcaption>
+      </figure>
+      <figure class="relative rounded-2xl overflow-hidden group">
+        <img src="assets/images/achievements/achievement_04_seasons100.jpg" alt="Seasons 100 Recognition" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/achievements/achievement_04_seasons100.jpg', 'Seasons 100 Recognition')">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 to-transparent text-white text-sm p-4">Seasons 100 Recognition</figcaption>
+      </figure>
+      <figure class="relative rounded-2xl overflow-hidden group">
+        <img src="assets/images/achievements/achievement_05_seasons100_2.jpg" alt="Seasons 100 Recognition" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/achievements/achievement_05_seasons100_2.jpg', 'Seasons 100 Recognition')">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 to-transparent text-white text-sm p-4">Seasons 100 Recognition</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section id="activities" class="py-20 md:py-28 bg-forest-50">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-forest-500">Behind the scenes</p>
+    <h2 class="font-display font-semibold text-3xl md:text-4xl mt-2 text-forest-900">Training and Activities Gallery</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-10">
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_01.jpg" alt="Manulife Activity" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_01.jpg', 'Manulife Activity')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Manulife Activity</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_02.jpg" alt="Training Session" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_02.jpg', 'Training Session')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Training Session</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_03.jpg" alt="Advisor Recognition" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_03.jpg', 'Advisor Recognition')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Advisor Recognition</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_04.jpg" alt="Team Group Photo" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_04.jpg', 'Team Group Photo')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Team Group Photo</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_05.jpg" alt="Team Meeting" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_05.jpg', 'Team Meeting')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Team Meeting</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_06.jpg" alt="Values and Culture" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_06.jpg', 'Values and Culture')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Values and Culture</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_07.jpg" alt="Advisor Milestone" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_07.jpg', 'Advisor Milestone')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Advisor Milestone</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_08.jpg" alt="Mentoring Session" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_08.jpg', 'Mentoring Session')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Mentoring Session</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_09.jpg" alt="Training Activity" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_09.jpg', 'Training Activity')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Training Activity</figcaption></figure>
+      <figure class="relative rounded-xl overflow-hidden group"><img src="assets/images/activities/activity_10.jpg" alt="Office Meeting" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openProductImage('assets/images/activities/activity_10.jpg', 'Office Meeting')"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/80 to-transparent text-white text-xs p-3">Office Meeting</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMS ============ -->
+<section id="forms" class="py-20 md:py-28">
+  <div class="max-w-3xl mx-auto px-5 md:px-8">
+    <p class="font-mono text-xs uppercase tracking-[0.2em] text-forest-500">Get started</p>
+    <h2 class="font-display font-semibold text-3xl md:text-4xl mt-2 text-forest-900">Online Forms</h2>
+
+    <div class="flex flex-wrap gap-2 mt-8 border-b border-forest-100">
+      <button class="tab tab-active px-4 py-3 text-sm font-semibold border-b-2 transition-colors" onclick="showForm('application', this)">Advisor Application</button>
+      <button class="tab tab-inactive px-4 py-3 text-sm font-semibold border-b-2 transition-colors" onclick="showForm('quote', this)">Client Quote</button>
+      <button class="tab tab-inactive px-4 py-3 text-sm font-semibold border-b-2 transition-colors" onclick="showForm('inquiry', this)">General Inquiry</button>
+    </div>
+
+    <form id="application" class="formbox mt-8 space-y-4" data-type="Application">
+      <h3 class="font-display font-semibold text-xl text-forest-900">Financial Advisor Application</h3>
+      <input required name="name" placeholder="Full Name" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input required name="mobile" placeholder="Mobile Number" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="email" type="email" placeholder="Email Address" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="facebook" placeholder="Facebook Name" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="file" type="file" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm bg-white focus:border-forest-500">
+      <select required name="interest" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm bg-white focus:border-forest-500">
+        <option value="">Applying For</option>
+        <option>Unit Head Associate</option><option>Junior Sales Associate</option><option>Financial Advisor</option><option>Part-time Advisor</option><option>Full-time Advisor</option>
+      </select>
+      <textarea name="message" placeholder="Background / reason for applying" rows="4" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500"></textarea>
+      <button type="submit" class="px-6 py-3 rounded-full bg-forest-800 text-white font-semibold hover:bg-forest-700 transition-colors">Submit Application</button>
+    </form>
+
+    <form id="quote" class="formbox hidden mt-8 space-y-4" data-type="Quote">
+      <h3 class="font-display font-semibold text-xl text-forest-900">Client Quote Request</h3>
+      <input required name="name" placeholder="Full Name" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input required name="mobile" placeholder="Mobile Number" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="email" type="email" placeholder="Email Address" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="facebook" placeholder="Facebook Name" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <select required name="interest" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm bg-white focus:border-forest-500">
+        <option value="">Product Interest</option>
+        <option>Freedom Plan</option><option>HealthFlex</option><option>MedSecure</option><option>React 5</option><option>Season 100</option><option>Life Insurance</option><option>Health Insurance</option><option>Education Fund</option><option>Retirement Fund</option>
+      </select>
+      <textarea name="message" placeholder="Age, budget, coverage, or question" rows="4" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500"></textarea>
+      <button type="submit" class="px-6 py-3 rounded-full bg-forest-800 text-white font-semibold hover:bg-forest-700 transition-colors">Submit Quote Request</button>
+    </form>
+
+    <form id="inquiry" class="formbox hidden mt-8 space-y-4" data-type="Inquiry">
+      <h3 class="font-display font-semibold text-xl text-forest-900">General Inquiry</h3>
+      <input required name="name" placeholder="Full Name" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input required name="mobile" placeholder="Mobile Number" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="email" type="email" placeholder="Email Address" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <input name="facebook" placeholder="Facebook Name" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500">
+      <select required name="interest" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm bg-white focus:border-forest-500">
+        <option value="">Inquiry Type</option>
+        <option>Career Inquiry</option><option>Product Inquiry</option><option>Training Inquiry</option><option>Partnership</option>
+      </select>
+      <textarea name="message" placeholder="Message" rows="4" class="w-full border border-forest-200 rounded-lg px-4 py-3 text-sm focus:border-forest-500"></textarea>
+      <button type="submit" class="px-6 py-3 rounded-full bg-forest-800 text-white font-semibold hover:bg-forest-700 transition-colors">Submit Inquiry</button>
+    </form>
+
+    <p id="msg" class="mt-4 text-sm font-medium text-forest-600 min-h-[1.25rem]"></p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-20 md:py-28 bg-forest-950 text-white">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-forest-300">Let's talk</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl mt-2">Contact Sandy V. Clavano</h2>
+      <p class="mt-3 text-forest-100/90 font-medium">Financial Advisor – MVP Falcon Unit</p>
+      <p class="mt-4 text-forest-100">📱 <strong>0975-302-7912</strong></p>
+      <p class="text-forest-100">📧 <strong>mvpsandyclavano@gmail.com</strong></p>
+    </div>
+    <div class="rounded-2xl border border-forest-700 bg-forest-900/60 p-8">
+      <h3 class="font-display font-semibold text-xl">Book a FREE Financial Consultation</h3>
+      <p class="text-forest-100/80 text-sm mt-3">Life Insurance • Health Insurance • Education Fund • Retirement Planning • Savings and Investment • Advisor Career</p>
+      <a href="#forms" class="inline-block mt-6 px-6 py-3 rounded-full bg-forest-400 text-forest-950 font-semibold hover:bg-white transition-colors">Submit Inquiry</a>
+    </div>
+  </div>
+</section>
+
+<div id="productImageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-forest-950/90 p-4" role="dialog" aria-modal="true" aria-label="Product poster preview" onclick="closeProductImage()">
+  <button type="button" onclick="event.stopPropagation(); closeProductImage()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 text-white text-2xl leading-none hover:bg-white/20 transition-colors" aria-label="Close preview">&times;</button>
+  <img id="productImageModalImg" src="" alt="" class="max-h-[90vh] max-w-full object-contain rounded-lg shadow-ring" onclick="event.stopPropagation()">
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-forest-950 text-forest-200 text-sm border-t border-forest-800">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+    <p>© 2026 MVP Falcon Unit Enterprise Website. All rights reserved.</p>
+    <p>0975-302-7912 · mvpsandyclavano@gmail.com</p>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
